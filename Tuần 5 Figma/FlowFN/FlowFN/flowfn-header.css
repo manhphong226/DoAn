@@ -1,0 +1,24 @@
+/* FlowFN — header dùng chung: cố định vị trí/kích thước header ở mọi trang.
+   Nguyên nhân lệch trước đây: trang chủ đặt header trong khung .glass (rộng 1360px, cách mép trên 33px),
+   các trang khác đặt trong .wrap.catalog-mast (rộng 1292px, cách mép trên 12px). */
+:root{--top-gap:33px}
+@media(max-width:850px){:root{--top-gap:17px}}
+@media(max-width:540px){:root{--top-gap:8px}}
+.opening{padding-top:var(--top-gap)}
+.catalog-mast{width:min(1360px,calc(100% - 74px));margin-inline:auto;padding-block:var(--top-gap) 0}
+.catalog-mast .masthead{border-radius:29px}
+.masthead{min-height:82px}
+
+/* Menu tài khoản */
+.account-menu{position:fixed;top:84px;right:12px;z-index:2000;width:296px;max-height:calc(100vh - 100px);overflow-y:auto;padding:10px;border:1px solid #fffd;border-radius:22px;background:#f9fcfcf5;box-shadow:0 22px 60px #123c4538;backdrop-filter:blur(16px);text-align:left}
+.account-menu[hidden]{display:none}
+.am-head{display:flex;gap:12px;align-items:center;padding:10px 10px 12px;border-bottom:1px solid #dbe6e8;margin-bottom:6px}
+.am-avatar{width:44px;height:44px;border-radius:50%;background:var(--brand-gradient,linear-gradient(135deg,#18a5a7,#b6c0c5));display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+.am-head strong{display:block;font-size:14px;letter-spacing:-.01em;line-height:1.25}
+.am-head small{display:block;color:var(--muted,#3a535b);font-size:12px;line-height:1.35}
+.am-item{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;border-radius:14px;background:transparent;color:inherit;font:600 13px/1.3 var(--ui,inherit);text-align:left;text-decoration:none;cursor:pointer}
+.am-item:hover,.am-item:focus-visible{background:#e4f1f2;outline:none}
+.am-item svg{width:18px;height:18px;flex:none;color:var(--accent,#125d65)}
+.am-item.on{background:#d8eff0}
+.am-sep{height:1px;background:#dbe6e8;margin:6px 4px}
+.am-out{color:#a1312b}.am-out svg{color:#a1312b}

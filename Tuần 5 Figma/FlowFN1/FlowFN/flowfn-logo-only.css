@@ -1,0 +1,57 @@
+
+/* Header - giữ nguyên logo */
+a.brand.flowfn-brand-replaced {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+}
+
+.flowfn-header-art {
+    display: block !important;
+    width: 205px !important;
+    height: 58px !important;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+    flex-shrink: 0;
+}
+
+/* Footer - tăng kích thước logo */
+a.footer-brand.flowfn-footer-replaced {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.flowfn-footer-art {
+    display: block;
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.flowfn-footer-caption {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .flowfn-header-art {
+        width: 150px !important;
+        height: 45px !important;
+    }
+
+    .flowfn-footer-art {
+        width: 85px !important;
+        height: 85px !important;
+    }
+}
